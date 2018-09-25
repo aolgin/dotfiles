@@ -1,0 +1,14 @@
+[user]
+  email = adam.olgin@modolabs.com
+  name = Adam Olgin
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+
+[color "diff"]
+  meta = yellow
+
+[github]
+  user = aolgin

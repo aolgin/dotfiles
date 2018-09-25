@@ -1,0 +1,15 @@
+#### ALIASES #### 
+alias ls='ls -Gh'
+alias push='pushd'
+alias pop='popd'
+alias vi='vi -p'
+alias df='df -h'
+alias bc='bc -q'
+alias repos='cd /Users/aolgin/Documents/repos'
+alias modo='cd /Users/aolgin/Documents/repos/modo'
+alias ppt='cd /Users/aolgin/Documents/repos/modo/meta-puppet'
+alias kui='cd /Users/aolgin/Documents/repos/modo/KapacitorUI'
+alias tf='cd /Users/aolgin/Documents/repos/modo/terraform'
+alias grep='rg'
+export BYOBU_PREFIX=/usr/local
+

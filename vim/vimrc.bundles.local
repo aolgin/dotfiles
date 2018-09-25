@@ -1,0 +1,10 @@
+Plug 'ctrlpvim/ctrlp.vim'
+" PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" Syntax
+Plug 'rodjek/vim-puppet'
+Plug 'ekalinin/dockerfile.vim'
+Plug 'vim-scripts/nginx.vim'
+Plug 'robbles/logstash.vim'
+" Plug 'wikitopian/hardmode'
