@@ -1,0 +1,12 @@
+# aliases
+alias ls='ls -G'
+alias ppt="cd /Users/aolgin/Documents/repos/modo/puppet"
+alias appman="cd /Users/aolgin/Documents/repos/modo/app-manager"
+alias repos="cd ~/repos"
+alias dkr="cd /Users/aolgin/repos/docker"
+alias dps="docker ps -a"
+alias py3="python3"
+alias bc="bc -ql"
+alias hydra="cd /Users/aolgin/repos/hydra"
+alias mk="minikube"
+alias ag='ag --path-to-ignore ~/.ignore --hidden'

@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/aolgin/repos/hydra/modo_cloud_idp/docker'
+let g:netrw_dirhist_2='/Users/aolgin/.docker'
+let g:netrw_dirhist_3='/Users/aolgin/repos/hydra/warehouse-admin'

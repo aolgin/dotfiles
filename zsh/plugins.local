@@ -1,0 +1,27 @@
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+  bundler
+  colored-man-pages
+  colorize
+  git
+  history
+  iterm2
+  osx
+  per-directory-history
+  rake
+  rails
+  safe-paste
+  zsh-autosuggestions
+  zsh_reload
+  docker
+  brew
+  capistrano
+  jsontools
+  jira
+  vagrant
+)

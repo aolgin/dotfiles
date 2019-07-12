@@ -1,86 +1,26 @@
-syn enable
-set nu relativenumber 
-set nocompatible " required for vim to be iMproved
-filetype indent plugin on " Determines filetype from name to allow intelligent auto-indenting, etc.
-syntax on " Enable syntax highlighting
-set wildmenu " Better command-line completion
-set ignorecase " Use case insensitive search except when using capital letters
-set smartcase " Use case insensitive search except when using capital letters
-set smarttab " enable intelligent tabbing and spacing for indentation and alignment
-set copyindent
-set autoindent
-set showmatch
-set hlsearch
-set incsearch
-set undolevels=1000
-set history=1000
-set tabstop=2
-set showtabline=2
-set expandtab
-set shiftwidth=2
-set pastetoggle=<f2>
+" Stolen from https://github.com/christoomey/dotfiles/blob/master/vim/vimrc
+" Vimrc
+"
+" This file contains the minimal settings to set the foundation, with the
+" majority of the configuration and settings living in files spread between
+" vim/rcfiles and vim/rcplugins
 
-" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
+set nocompatible
 
-" Make sure you use single quotes
+" Need to set the leader before defining any leader mappings
+let mapleader = "\<Space>"
 
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-"Plug 'junegunn/vim-easy-align'
+function! s:SourceConfigFilesIn(directory)
+  let directory_splat = '~/.vim/' . a:directory . '/*'
+  for config_file in split(glob(directory_splat), '\n')
+    if filereadable(config_file)
+      execute 'source' config_file
+    endif
+  endfor
+endfunction
 
-" Any valid git URL is allowed
-"Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-" Multiple Plug commands can be written in a single line using | separators
-"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" On-demand loading
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" Using a non-master branch
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-"Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
-"Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Unmanaged plugin (manually installed and updated)
-"Plug '~/my-prototype-plugin'
-
-" http://vimawesome.com/plugin/fugitive-vim
-Plug 'tpope/vim-fugitive'
-
-" http://vimawesome.com/plugin/vim-airline
-Plug 'bling/vim-airline'
-
-" http://vimawesome.com/plugin/rails-vim
-Plug 'tpope/vim-rails'
-
-" http://vimawesome.com/plugin/vim-ruby
-Plug 'vim-ruby/vim-ruby'
-
-" http://vimawesome.com/plugin/commentary-vim
-Plug 'tpope/vim-commentary'
-
-" http://vimawesome.com/plugin/indent-guides
-Plug 'nathanaelkane/vim-indent-guides'
-
-" http://vimawesome.com/plugin/trailing-whitespace
-Plug 'bronson/vim-trailing-whitespace'
-
-" http://vimawesome.com/plugin/vim-puppet-enchanted
-Plug 'rodjek/vim-puppet'
-
-" http://vimawesome.com/plugin/vim-tickscript
-Plug 'nathanielc/vim-tickscript'
-
-" Initialize plugin system
+call plug#begin('~/.vim/bundle')
+call s:SourceConfigFilesIn('rcplugins')
 call plug#end()
+
+call s:SourceConfigFilesIn('rcfiles')

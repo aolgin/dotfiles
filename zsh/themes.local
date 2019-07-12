@@ -1,0 +1,14 @@
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+POWERLEVEL9K_MODE='nerdfont-complete'
+source  ~/powerlevel9k/powerlevel9k.zsh-theme
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir nodeenv pyenv rbenv vcs newline)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status rspec_stats time)
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
